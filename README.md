@@ -10,14 +10,14 @@
 
 ## Usage
 ### Options
-#### log [Boolean]
+#### log   [Boolean]
 
 Boolean option which logs tidied html to the console.
 By default no output is logged.
 
 #### rules [Object]
 
-If no rules set, tidy will use the default setup.For rules see [Quick Reference](http://api.html-tidy.org/tidy/quickref_5.1.25.html).
+If no rules set, tidy will use the default setup.For rules take a look at the [Quick Reference](http://api.html-tidy.org/tidy/quickref_5.1.25.html).
 Multi-word rules separated with a hyphen should be used with camelCase.
 
 ```js
@@ -72,9 +72,9 @@ const tidy = require('posthtml-tidy')({
 </html>
 ```
 
-For general usage and build process integration see [PostHTML Docs](https://github.com/posthtml/posthtml#usage)
-
 ### Example using Node API
+
+For general usage and build process integration see [PostHTML Docs](https://github.com/posthtml/posthtml#usage)
 
 ```js
 const fs = require('fs')
