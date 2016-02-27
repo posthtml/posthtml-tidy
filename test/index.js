@@ -4,7 +4,14 @@ const fs = require('fs')
 
 let posthtml = require('posthtml')
 
-let tidy = require('../index')()
+let tidy = require('../index')({
+  log: true,
+  rules: {
+    doctype: 'omit',
+    hideComments: true,
+    dropEmptyElements: true
+  }
+})
 
 let html = fs.readFileSync('./index.html', 'utf-8')
 

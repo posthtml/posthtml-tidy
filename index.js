@@ -12,14 +12,17 @@ const render = require('posthtml-render')
 
 exports = module.exports = function (options) {
   options = options || {}
-  options.option = options.option || {}
+  options.log = options.log || false
+  options.rules = options.rules || {}
 
   return function PostHTMLTidy (tree) {
-    tidy(render(tree), options.option, (err, msg) => {
-      if (err) {
-        console.log(err)
+    tidy(render(tree), options.rules, (err, msg) => {
+      if (options.log === true) {
+        if (err) {
+          console.log(chalk.red(err))
+        }
+        console.log(chalk.green(msg))
       }
-      console.log(msg)
     })
     return tree
   }
