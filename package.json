@@ -1,0 +1,24 @@
+{
+  "name": "posthtml-tidy",
+  "version": "0.8.0",
+  "description": "HTML Tidy for PostHTML",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "htmltidy2": "^0.1.4",
+    "posthtml-render": "^1.0.5"
+  },
+  "devDependencies": {},
+  "author": {
+    "name": "Michael Ciniawky",
+    "email": "michael.ciniawsky@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http:/github.com/michael-ciniawsky/posthtml-tidy"
+  },
+  "license": "MIT"
+}
