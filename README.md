@@ -17,7 +17,8 @@ By default no output is logged.
 
 #### rules [Object]
 
-If no rules set, tidy will use the default setup.For rules take a look at the [Quick Reference](http://api.html-tidy.org/tidy/quickref_5.1.25.html).
+If no rules set, tidy will use it's default setup.
+For rules take a look at the [Quick Reference](http://api.html-tidy.org/tidy/quickref_5.1.25.html).
 Multi-word rules separated with a hyphen should be used with camelCase.
 
 ```js
