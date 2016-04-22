@@ -1,6 +1,6 @@
 # HTML Tidy for PostHTML
 
-[HTML Tidy](html-tidy.org) corrects and cleans up HTML and XML documents by fixing markup errors and upgrading legacy code to modern standards.
+[HTML Tidy](http://html-tidy.org) corrects and cleans up HTML and XML documents by fixing markup errors and upgrading legacy code to modern standards.
 
 ## Install
 
