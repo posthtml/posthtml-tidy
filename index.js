@@ -9,6 +9,14 @@ const chalk = require('chalk')
 const tidy = require('htmltidy2').tidy
 
 const render = require('posthtml-render')
+const parser = require('posthtml-parser')
+
+const log = function (err, msg) {
+  if (err) {
+    console.log(chalk.red(err))
+  }
+  console.log(chalk.green(msg))
+}
 
 exports = module.exports = function (options) {
   options = options || {}
@@ -16,14 +24,18 @@ exports = module.exports = function (options) {
   options.rules = options.rules || {}
 
   return function PostHTMLTidy (tree) {
-    tidy(render(tree), options.rules, (err, msg) => {
-      if (options.log === true) {
-        if (err) {
-          console.log(chalk.red(err))
+    return new Promise((resolve, reject) => {
+      tidy(render(tree), options.rules, (err, msg) => {
+        if (options.log) {
+          log(err, msg)
         }
-        console.log(chalk.green(msg))
-      }
+
+        if (err) {
+          reject(err || new Error('Unknown problem in posthtml-tidy.'))
+        }
+
+        resolve(parser(msg))
+      })
     })
-    return tree
   }
 }
