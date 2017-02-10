@@ -9,6 +9,7 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "htmltidy2": "^0.1.4",
+    "posthtml-parser": "^0.2.0",
     "posthtml-render": "^1.0.5"
   },
   "devDependencies": {},
